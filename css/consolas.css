@@ -1,0 +1,63 @@
+#Consolas h3, h4{
+    text-align: center;
+} 
+
+#Consolas .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Consola article{
+    margin: 15px;
+}
+
+#Consola img{
+    width: 100%;
+    max-width: 280px;
+}
+.slider{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1020px;
+    height: 280px;
+    margin: 20px auto;
+    background-image: url(../imagenes/consola_play.jpg);
+    background-size: 100% 100%;
+    animation-name:consolas-slider;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 15px;
+}
+@keyframes consolas-slider{
+    0%, 23%{
+        background-image: url(../imagenes/consola_play.jpg);
+        opacity: 1;
+    }
+    23.1%, 25%{
+        opacity: 0.2;
+    }
+    25.1%, 48%{
+        background-image: url(../imagenes/consola_xbox.jpg);
+        opacity: 1;
+    }
+    48.1%, 50%{
+        opacity: 0.2;
+    }
+    50.1%, 73%{
+        background-image: url(../imagenes/consola_Nintendo.png);
+        opacity: 1;
+    }
+    73.1%, 75%{
+        opacity: 0.2;
+    }
+    75.1%, 98%{
+        background-image: url(../imagenes/pc.jfif);
+        opacity: 1;
+    }
+    98.1%, 100%{
+        opacity: 0.2;
+    }
+}

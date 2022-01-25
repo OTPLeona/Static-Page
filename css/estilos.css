@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url(menu.css);
+@import url(banner.css);
+@import url(consolas.css);
+@import url(info.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+h1{
+    float: left;
+}
+
+header .contenedor{
+    display: table;
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#presentacion{
+    text-align: center;
+}
+
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.copy{
+    font-size: 20px;
+}
+
+.sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a{
+    color: #333;
+    text-decoration: none;
+}
+
+@media (min-width: 768px){
+    .sociales{
+        width: auto;
+    }
+
+    footer .contenedor{
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px){
+    .contenedor{
+        width: 1000px;
+    }
+
+}
+.slider{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: 500px;
+    height: 281px;
+    margin: 20px auto;
+    background-image: url(../imagenes/consola_play.jpg);
+    background-size: 100% 100%;
+    animation-name:consolas-slider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 15px;
+}
+@keyframes consolas-slider{
+    0%, 23%{
+        background-image: url(../imagenes/consola_play.jpg);
+        opacity: 1;
+    }
+    23.1%, 25%{
+        opacity: 0.2;
+    }
+    25.1%, 48%{
+        background-image: url(../imagenes/consola_xbox.jpg);
+        opacity: 1;
+    }
+    48.1%, 50%{
+        opacity: 0.2;
+    }
+    50.1%, 73%{
+        background-image: url(../imagenes/consola_Nintendo.png);
+        opacity: 1;
+    }
+    73.1%, 75%{
+        opacity: 0.2;
+    }
+    75.1%, 98%{
+        background-image: url(../imagenes/pc.jfif);
+        opacity: 1;
+    }
+    98.1%, 100%{
+        opacity: 0.2;
+    }
+}
